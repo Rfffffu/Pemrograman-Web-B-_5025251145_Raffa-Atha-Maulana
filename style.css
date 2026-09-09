@@ -44,6 +44,7 @@ h3 {
 
 p { margin: 0; }
 
+/* ============ LEFT SIDEBAR ============ */
 .left.bar {
   background: var(--sidebar);
   color: var(--sidebar-text);
@@ -76,8 +77,6 @@ p { margin: 0; }
 .left.bar > p:first-of-type {
   color: var(--sidebar-muted);
   font-size: 13.5px;
-  padding-bottom: 28px;
-  border-bottom: 1px solid rgba(255,255,255,.1);
   margin-bottom: 28px;
 }
 
@@ -107,6 +106,69 @@ p { margin: 0; }
   line-height: 1.7;
 }
 
+.right-column {
+  display: flex;
+  flex-direction: column;
+}
+/* ============ Contacts Info ============= */
+.contacts.info {
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  padding: 30px 64px;
+}
+
+.contacts.info ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 20%;
+}
+
+.contacts.info ul li img {
+    width: 34px;                  
+    height: 34px;                 
+    object-fit: contain;          
+    border-radius: 6px;           
+    background-color: transparent;
+}
+
+/* ============ PERSONAL DATA BAR ============ */
+.personal.data {
+  background: var(--paper);
+  border-top: 1px solid var(--rule);
+  padding: 30px 64px;
+}
+
+.personal.data ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 40px;
+}
+
+.personal.data li {
+  font-size: 13px;
+  color: var(--ink);
+  line-height: 1.5;
+  flex: 1 1 150px;
+}
+
+.personal.data li:last-child {
+  flex: 2 1 260px;
+}
+
+.personal.data h3 {
+  color: var(--accent);
+  font-size: 11px;
+  margin-bottom: 4px;
+  margin-top: 0;
+}
+
+/* ============ RIGHT CONTENT ============ */
 .right.bar {
   padding: 56px 64px;
   max-width: 720px;
@@ -117,6 +179,7 @@ p { margin: 0; }
   margin-bottom: 32px;
 }
 
+/* timeline entries: each h2 + p pair is one event */
 .right.bar h2 {
   position: relative;
   font-size: 21px;
@@ -161,12 +224,16 @@ p { margin: 0; }
   margin-bottom: 34px;
 }
 
+/* ============ RESPONSIVE ============ */
 @media (max-width: 860px) {
   body { grid-template-columns: 1fr; }
   .left.bar {
     position: static;
     height: auto;
     padding: 40px 28px;
+  }
+  .personal.data {
+    padding: 24px 28px;
   }
   .right.bar {
     padding: 40px 28px;
