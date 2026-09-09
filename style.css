@@ -134,7 +134,7 @@ p { margin: 0; }
     background-color: transparent;
 }
 
-/* ============ PERSONAL DATA BAR ============ */
+/* ============ PERSONAL DATA ============ */
 .personal.data {
   background: var(--paper);
   border-top: 1px solid var(--rule);
@@ -179,7 +179,6 @@ p { margin: 0; }
   margin-bottom: 32px;
 }
 
-/* timeline entries: each h2 + p pair is one event */
 .right.bar h2 {
   position: relative;
   font-size: 21px;
@@ -222,21 +221,4 @@ p { margin: 0; }
 
 .right.bar p:empty {
   margin-bottom: 34px;
-}
-
-/* ============ RESPONSIVE ============ */
-@media (max-width: 860px) {
-  body { grid-template-columns: 1fr; }
-  .left.bar {
-    position: static;
-    height: auto;
-    padding: 40px 28px;
-  }
-  .personal.data {
-    padding: 24px 28px;
-  }
-  .right.bar {
-    padding: 40px 28px;
-    max-width: none;
-  }
 }
